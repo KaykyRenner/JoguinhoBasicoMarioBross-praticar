@@ -1,0 +1,42 @@
+.container{
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.canoDoMario{
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    animation: PipeAnimation 1.5s infinite linear;
+}
+.MarioCorrendo{
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+.jump{
+    animation: jumpMario 500ms ease-out;
+}
+@keyframes PipeAnimation{
+    from{
+        right: -80px;
+    }
+    to{ 
+        right: 100%;
+    }
+}
+@keyframes jumpMario{
+    0%{
+        bottom: 0;
+    } 
+    50%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}

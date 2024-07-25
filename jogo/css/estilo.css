@@ -1,42 +1,88 @@
-.container{
-    width: 80%;
-    height: 500px;
-    border: 1px solid black;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+* {
+margin: 0;
+padding: 0;
 }
-.canoDoMario{
+.container {
+background-image: linear-gradient(to top, #d4eaf5, #98dafd);
+border-bottom: 10px solid rgb(2, 161, 2);
+width: 100%;
+height: 98vh;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+}
+.canoDoMario {
+position: absolute;
+bottom: 0;
+width: 70px;
+animation: PipeAnimation 1.5s infinite linear;
+}
+.MarioCorrendo {
+position: absolute;
+bottom: 0;
+width: 150px;
+}
+.jump {
+animation: jumpMario 500ms ease-out;
+}
+.cloud2 {
+width: 550px;
+position: absolute;
+animation: Cloud-animation 30s infinite linear;
+}
+.cloud {
+width: 550px;
+position: absolute;
+animation: Cloud-animation2 20s infinite linear;
+}
+.CloudMorte{
+    width: 550px;
     position: absolute;
-    bottom: 0;
-    width: 70px;
-    animation: PipeAnimation 1.5s infinite linear;
+    left: 50%;
 }
-.MarioCorrendo{
+.GameOver{
+    width: 400px;
     position: absolute;
+    bottom: 150px;
+    left: 35%;
+}
+.Score{
+    position: absolute;
+    bottom: 200px;
+}
+@keyframes Cloud-animation2 {
+from {
+    right: -550px;
+}
+to {
+    right: 100%;
+}
+}
+@keyframes Cloud-animation {
+from {
+    right: -550px;
+}
+to {
+    right: 100%;
+}
+}
+@keyframes PipeAnimation {
+from {
+    right: -80px;
+}
+to {
+    right: 100%;
+}
+}
+@keyframes jumpMario {
+0% {
     bottom: 0;
-    width: 150px;
 }
-.jump{
-    animation: jumpMario 500ms ease-out;
+50% {
+    bottom: 180px;
 }
-@keyframes PipeAnimation{
-    from{
-        right: -80px;
-    }
-    to{ 
-        right: 100%;
-    }
-}
-@keyframes jumpMario{
-    0%{
-        bottom: 0;
-    } 
-    50%{
-        bottom: 180px;
-    }
 
-    100%{
-        bottom: 0;
-    }
+100% {
+    bottom: 0;
+}
 }
